@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raw react apis</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
+    <script type="text/babel">
+       const root = document.getElementById("root")
+
+       function message ({children}) {
+           return <div className ="message">{children}</div>
+       }
+
+
+       function Message ({greet, msg}) {
+           return <div className ="message">{greet + " "+ msg}</div>
+       }
+
+       Message.propTypes  = {
+        greet : PropTypes.string.isRequired,
+        msg : PropTypes.string.isRequired
+       }
+
+       const helloElement = React.createElement(message, {}, "Hello world")
+    //    console.log(helloElement);
+
+       const reactCreateEl = React.createElement("div", {}, "Test");
+    //    console.log(reactCreateEl)
+
+       const jsxEl = <div>Test</div>
+    //    console.log(jsxEl);
+
+    //    const helloJsx = <Message>Hello world</Message>
+       //console.log(helloJsx);
+
+       const element = (
+        <div className="container">
+            {/** Using JS
+                {message({children : "Hello world"})}
+                {message({children : "Goodbye world"})}
+            **/}
+
+            {/** Using React.createElement
+                {React.createElement(message, {}, "Hello world")}
+                {React.createElement(message, {}, "Hello world")}
+            **/}
+
+            <Message msg="world" />
+            <Message greet="Goodbye" msg={2} />
+
+            
+        </div>
+        )
+
+       
+       ReactDOM.render(element, root);
+
+    </script>
+</body>
+</html>

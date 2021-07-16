@@ -1,0 +1,22 @@
+.message-app {
+  width: 350px;
+  margin: auto;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.chat-box {
+  border: 1px solid gray;
+  padding: 1rem;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.chat-box div {
+  margin: 1rem;
+  background: rgba(0, 0, 0, 0.1);
+}

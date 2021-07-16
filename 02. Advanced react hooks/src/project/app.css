@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400|Roboto:400");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+} /*16px*/
+
+body {
+  background: white;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  overflow: hidden;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+/* APP  */
+#root {
+  display: grid;
+  grid-template-rows: 4rem auto 4rem;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "header header" "sidebar products" "footer footer";
+}
+
+/* LAYOUT  */
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  min-height: 80vh;
+  width: 100vh;
+}
+
+.products {
+  grid-area: products;
+  min-height: 80vh;
+  width: 100vh;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+@media screen and (min-width: 550px) {
+  .sidebar {
+    width: 40vh;
+  }
+  .products {
+    width: 60vh;
+  }
+}
+
+/* HEADER  */
+.header {
+  background-color: #a6a7a7;
+  position: relative;
+}
+
+.header a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.navItems {
+  display: none;
+}
+
+.navLink {
+  margin-right: 2rem;
+}
+
+.bars {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.bars div {
+  width: 1.7rem;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.responsive {
+  width: 50vh;
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  background-color: #a6a7a7;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  z-index: 1;
+}
+
+.responsive .navLink {
+  border-bottom: 1px solid gray;
+  width: 100%;
+  text-align: center;
+  padding: 0.6rem;
+  transition: 0.5s;
+}
+
+.responsive .navLink:hover {
+  background-color: cadetblue;
+}
+
+.shadow1 {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  right: 0;
+}
+
+@media screen and (min-width: 550px) {
+  .bars,
+  .responsive,
+  .shadow1,
+  .shadow {
+    display: none;
+  }
+  .navItems {
+    display: flex;
+  }
+}
+
+/* PRODUCT CARD */
+
+.products {
+  padding: 3rem;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  color: #000000;
+  font-weight: 500;
+}
+
+.card img {
+  height: 50%;
+  width: 50%;
+  margin: auto;
+  transition: 0.3s;
+}
+
+.card img:hover {
+  transform: scale(1.3) rotate(2deg);
+}
+
+.card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-btn {
+  text-decoration: none;
+  background-color: #3899c2;
+  padding: 0.2rem 1.5rem;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.card-price {
+  text-align: center;
+}
+
+@media screen and (min-width: 550px) {
+}

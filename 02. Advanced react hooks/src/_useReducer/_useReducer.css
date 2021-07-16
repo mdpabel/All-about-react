@@ -1,0 +1,58 @@
+:root {
+  --primary-color: rgba(0, 0, 0, 0.8);
+  --danger-color: red;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  flex-direction: column;
+  box-shadow: 0, 0, 0, red;
+}
+
+.login-component {
+  padding: 3rem;
+  box-shadow: 0px 0px 2px grey;
+}
+
+form {
+  width: 300px;
+}
+
+form > div {
+  margin-bottom: 1.3rem;
+}
+
+input,
+button {
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid gray;
+}
+
+input::placeholder {
+  color: var(--primary-color);
+}
+
+button {
+  background-color: #fff;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.title {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.error {
+  color: var(--danger-color);
+}
