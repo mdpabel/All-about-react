@@ -1,4 +1,12 @@
 import ReactDOM from "react-dom";
-import App from "./00. Context Module Functions/02/App";
+import App from "./05. props getter/App";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+import "./App.css";
+import "./index.css";
+
+ReactDOM.render(
+  <>
+    <App />
+  </>,
+  document.getElementById("root")
+);
