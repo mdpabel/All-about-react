@@ -7,8 +7,9 @@ function useToggle(initialState = false) {
 
   return {
     state,
-    toggleHandle: {
+    toggleProps: {
       onClick: () => toggle(),
+      "aria-pressed": state,
     },
   };
 }

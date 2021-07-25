@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
 
-import App from "./useToggle/App";
+import App from "./02. usePrevious/App";
 
 ReactDOM.render(<App />, document.getElementById("root"));

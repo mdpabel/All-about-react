@@ -2,10 +2,10 @@ import React from "react";
 import useToggle from "./useToggle";
 
 const App = () => {
-  const { state, toggleHandle } = useToggle();
+  const { state, toggleProps } = useToggle();
   return (
     <>
-      <button {...toggleHandle()}> {state ? "On" : "Off"} </button>
+      <button {...toggleProps}> {state ? "Off" : "On"} </button>
     </>
   );
 };
