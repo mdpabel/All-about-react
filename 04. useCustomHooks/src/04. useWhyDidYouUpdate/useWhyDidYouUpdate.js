@@ -21,7 +21,7 @@ function useWhyDidYouUpdate(name, props) {
       if (Object.keys(changesObj).length) {
         console.log(
           "%c [Why-Did-You-Update]",
-          "background: tomato; color: #fff",
+          "background: tomato; color: #ffffff",
           name,
           changesObj
         );

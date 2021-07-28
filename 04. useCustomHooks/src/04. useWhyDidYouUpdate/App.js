@@ -19,6 +19,7 @@ const App = () => {
     return {
       color: "white",
       background: "red",
+      padding : "0.5rem 2 rem"
     };
   }, []);
    */
