@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
-import App from "./_useDebugValue/App";
+import App from "./__useMemo/App";
 import "./index.css";
 
 import { BrowserRouter } from "react-router-dom";
