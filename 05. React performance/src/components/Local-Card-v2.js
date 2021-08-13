@@ -1,3 +1,4 @@
+/* eslint-disable no-func-assign */
 import React, { useEffect } from "react";
 import data from "../data";
 import { filter } from "../04. web workers/filter-worker";
@@ -5,7 +6,7 @@ import { filter } from "../04. web workers/filter-worker";
 import { Card } from "./Card";
 import useAsync from "../useAsync";
 
-const SyncCard = ({ search }) => {
+function SyncCard({ search }) {
   const { run, state } = useAsync({ status: "pending" });
 
   useEffect(() => {
@@ -21,7 +22,7 @@ const SyncCard = ({ search }) => {
     >
       {state.status === "resolved" &&
         state.data
-          ?.slice(0, 1000)
+          ?.slice(0, 200000000)
           .map(({ thumbnailUrl, title, id }) => (
             <Card key={id} img={thumbnailUrl} title={title} />
           ))}
@@ -32,6 +33,8 @@ const SyncCard = ({ search }) => {
       ) : null}
     </div>
   );
-};
+}
+
+SyncCard = React.memo(SyncCard);
 
 export default SyncCard;
